@@ -1,0 +1,54 @@
+<body class="login">
+    <div class="login">
+        <h2 class="signup">sign up</h2>
+        <form method="post" action="/users">
+            <input type="text" class="text" name="user[username]" id="usernameInput" placeholder="User name">
+            <span>User name</span>
+            <br>
+            <input type="email" class="text" name="user[email]" id="emailInput" placeholder="Email">
+            <span>email</span>
+            <br>
+            <input type="password" class="text" name="user[password]" id="passwordInput" placeholder="Password">
+            <span>password</span>
+
+            <button type="submit" class="signup-button">Sign Up</button>
+            
+            <button class="go-to-login" id="goToLoginButton">I have an account</button>
+            <hr>
+            <a href="#">Forgot Password?</a>
+        </form>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+        var usernameInput = document.getElementById('usernameInput');
+        var emailInput = document.getElementById('emailInput');
+        var passwordInput = document.getElementById('passwordInput');
+        var goToLoginButton = document.getElementById('goToLoginButton');
+        var goBackToLogin = false;
+
+        goToLoginButton.addEventListener('click', function() {
+            goBackToLogin = true;
+            window.location.href = 'http://localhost:3000/registration';
+        });
+
+        form.addEventListener('submit', function (event) {
+            if (goBackToLogin) {
+                goBackToLogin = false;
+                return;
+            }
+
+            var userNameValue = usernameInput.value;
+            var emailValue = emailInput.value;
+            var passwordValue = passwordInput.value;
+
+            if (userNameValue.trim() === '' || emailValue === '' || passwordValue === '') {
+                alert("Вы заполнили не все данные");
+                event.preventDefault();
+                window.location.href = 'http://localhost:3000/login';
+            }
+        });
+    });
+</script>

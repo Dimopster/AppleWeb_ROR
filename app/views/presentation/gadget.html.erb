@@ -1,0 +1,472 @@
+<body class="main-window">
+
+    <header>
+        <div class="text-and-menu">
+            <h1>Introducing iPhone 15</h1>
+            <p>The latest innovation in mobile technology</p>
+        </div>
+        <nav>
+            <div class="burger-button">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+            <div class="burger-menu">
+                <p id="userNamePlaceholder">User Name: <%= @username %></p>
+                <p id="emailPlaceholder">Email: <%= @email %></p>
+                <a href="http://localhost:3000/registration" style="text-decoration: underline;">Loadout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <img src="/assets/iPhone15.png" alt="iPhone 15">
+        <p>Experience the future of communication</p>
+    </section>
+
+    <section class="present">
+        <p class="highlight">Get the highlights.</p>
+    </section>
+
+    <section class="photo-section">
+        <div class="gallery">
+            <img src="/assets/iPhone15_black.png" alt="iPhone 15" class="slide" onclick="changeImage('/assets/iPhone15_black.png')">
+            <img src="/assets/iPhone15_blue.png" alt="iPhone 15" class="slide" onclick="changeImage('/assets/iPhone15_blue.png')">
+            <img src="/assets/iPhone15_green.png" alt="iPhone 15" class="slide" onclick="changeImage('/assets/iPhone15_green.png')">
+            <img src="/assets/iPhone15_yellow.png" alt="iPhone 15" class="slide" onclick="changeImage('/assets/iPhone15_yellow.png')">
+            <img src="/assets/iPhone15_pink.png" alt="iPhone 15" class="slide" onclick="changeImage('/assets/iPhone15_pink.png')">
+        </div>
+    </section>
+
+    <section class="all-colors">
+        <p class="highlight">All iPhone 15 colors.</p>
+        <img src="/assets/iPhone15_all.png" alt="iPhone 15">
+    </section>
+
+    <section class="battery">
+        <p class="highlight">All-day battery life.</p>
+        <p class="highlight">For all the things you</p>
+        <p class="highlight">want to keep doing.</p>
+    </section>
+
+    <section class="jack">
+        <img src="/assets/jack.png" alt="iPhone 15">
+        <div class="text-container">
+            <p class="highlight">Up to</p>
+            <p class="highlight-hrs">26 hrs</p>
+            <p class="highlight">video playback on iPhone 15 Plus<sup style="text-decoration: underline;">5</sup></p>
+            <br><br><br>
+            <p class="highlight">Up to</p>
+            <p class="highlight-hrs">20 hrs</p>
+            <p class="highlight">video playback on iPhone 15<sup style="text-decoration: underline;">5</sup></p>
+        </div>
+    </section>
+
+    <section class="chip">
+        <div class="black">
+            <p class="check">A16 Bionic chip.</p>
+            <p class="check">A Pro-proven</p>
+            <p class="check">powerhouse.</p>
+        </div>
+        <div class="video-container">
+            <video muted>
+                <source src="/videos/chip.mp4" type="video/mp4">
+            </video>
+        </div>
+        <br><br><br>
+        <hr style="width: 75%;">
+        <span><pre><p class="info">A16 Bionic powers all kinds of advanced features. 
+        Like computational photography used for 24MP photos and next-generation portraits. 
+        Voice Isolation for phone calls. And smooth performance for graphics-intensive games. 
+        All with incredible efficiency for great battery life.
+        No wonder it started as a Pro chip.</p></pre></span>
+        <hr style="width: 30%; border-top: 1px solid #fff;">
+            <div class="icon">
+                <img src="/assets/icon.png">
+                <p class="gpu">The A16 Bionic GPU is up to 40% faster than the GPU in iPhone 12</p>
+            </div>
+    </section>
+
+    <section class="almost-end">
+        <div class="card">
+            <pre><p style="color: rgb(118, 118, 118); font-size: 66px;" class="up">iOS 17.</p>
+            <p style="color: #000;" class="up">Style it out. Swap it over.</p>
+            <p style="color: #000;" class="up">Sticker it up.</p></pre>
+            <div class="photos">
+                <div class="card-1">
+                    <img src="/assets/card-1.png">
+                    <p style="color: #000; font-weight: 600;" class="last">Contact Poster.</p><p class="last">Create your own poster that contacts will see when you call. Pick a favorite pic or Memoji, pair it with a favorite font, and there you have it — your very own calling card.</p>
+                </div>
+                <div class="card-2">
+                    <img src="/assets/card-2.png">
+                    <p style="color: #000; font-weight: 600;" class="last">NameDrop.</p><p class="last">Want to swap contact info with someone? Just bring your iPhone close to theirs. You can both choose what you want to share, and the information transfers instantly.</p>
+                </div>
+                <div class="card-3">
+                    <img src="/assets/card-3.png">
+                    <p style="color: #000; font-weight: 600;" class="last">Live Stickers.</p><p class="last">Touch and hold an object in a photo to lift it from the background and create a sticker. Add effects like Puffy and Shiny. Or create animated stickers from Live Photos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="end-up">
+        <p style="text-align: left; color: black; font-size: 40px; font-weight: bold; margin-left: 50px;">iPhone</p>
+        <div class="footer-part">
+            <div class="column-1">
+                <p style="font-size: 12px; color: #B0B0B0;">Explore iPhone</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">Explore All iPhone</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">iPhone 15 Pro</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">iPhone 15</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">iPhone 14</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">iPhone 13</p>
+                <p style="font-size: 26px; color: #000; font-weight: 600; margin-bottom: -8px;">iPhone SE</p><br>
+                <p style="font-size: 16px; color: #000; margin-top: 28px;">Compare iPhone</p>
+                <p style="font-size: 16px; color: #000;">Switch from Android</p>
+            </div>
+            <div class="column-2">
+                <p style="font-size: 12px; color: #B0B0B0;">Shop iPhone</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px; margin-top: 35px;">Shop iPhone</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">iPhone Accessories</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Apple Trade In</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Carrier Deals at Apple</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Financing</p>
+            </div>
+            <div class="column-3">
+                <p style="font-size: 12px; color: #B0B0B0;">Go Further</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px; margin-top: 35px;">iPhone Support</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">AppleCare+ for iPhone</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">iOS 17</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Apps by Apple</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">iPhone Privacy</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">iCloud+</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Wallet, Pay, Card</p>
+                <p style="font-size: 15px; color: #000; margin-bottom: 22px;">Siri</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 150px;" class="discussion">
+        <div class="leave-comment">
+            <p style="font-size: 46px; color: black; text-align: left; font-weight: 600; margin-left: 60px;">Comments for discussing new iPhone:</p>
+            <hr style="width: 80%;">
+            <p style="font-size: 32px; color: black; text-align: left; margin-left: 60px;">Add comments:</p>
+            <p style="font-size: 20px; color: grey; text-align: left; margin-left: 60px;">User name:</p>
+            <input id="usernameInput" style="text-align: left; display: flex; margin-left: 80px; width: 650px; font-size: 22px; border-radius: 8px; height: 32px;"></input>
+            <p style="font-size: 20px; color: grey; text-align: left; margin-left: 60px; margin-top: 40px;">Comment:</p>
+            <textarea id="commentInput" style="text-align: left; display: flex; margin-left: 80px; width: 650px; font-size: 20px; border-radius: 8px; height: 90px; border: 2px solid black;"></textarea>
+            <button id="addCommentBtn">Add comment</button>
+            <button id="deleteAllComments">Delete all comments</button>
+            <hr style="width: 96%; margin-top: 50px;">
+            <div id="commentsContainer" class="add-comment"></div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2023 Apple Inc. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 250;
+                var presentSection = document.querySelector('.present');
+
+                if (scrollTop > triggerHeight) {
+                    presentSection.style.opacity = '1';
+                } else {
+                    presentSection.style.opacity = '0';
+                }
+            });
+        });
+    
+        function changeImage(src) {
+            const slides = document.querySelectorAll('.slide');
+            clearActiveClasses(slides);
+            const selectedSlide = Array.from(slides).find(slide => slide.src.includes(src));
+            selectedSlide.classList.add('active');
+        }
+        
+        function clearActiveClasses(slides) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+        } 
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 1150;
+                var presentSection = document.querySelector('.all-colors');
+
+                if (scrollTop > triggerHeight) {
+                    presentSection.style.opacity = '1';
+                } else {
+                    presentSection.style.opacity = '0';
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 2450;
+                var presentSection = document.querySelector('.jack .text-container');
+        
+                if (scrollTop > triggerHeight) {
+                    presentSection.style.opacity = '1';
+                } else {
+                    presentSection.style.opacity = '0';
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var videoContainer = document.querySelector('.chip .video-container');
+            var video = videoContainer.querySelector('video');
+            var hasPlayed = false;
+        
+            window.addEventListener("scroll", function () {
+                var rect = videoContainer.getBoundingClientRect();
+                var triggerHeight = 50;
+        
+                if (rect.top < triggerHeight && rect.bottom >= 0 && !hasPlayed) {
+                    video.play();
+                    hasPlayed = true;
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 4240;
+                var presentSection = document.querySelector('.info');
+
+                if (scrollTop > triggerHeight) {
+                    presentSection.style.opacity = '1';
+                } else {
+                    presentSection.style.opacity = '0';
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 4340;
+                var presentSection = document.querySelector('.icon');
+
+                if (scrollTop > triggerHeight) {
+                    presentSection.style.opacity = '1';
+                } else {
+                    presentSection.style.opacity = '0';
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                var scrollTop = window.scrollY;
+                var triggerHeight = 5730;
+                var lastElements = document.querySelectorAll('.almost-end .card .photos .last');
+        
+                lastElements.forEach(function (element) {
+                    if (scrollTop > triggerHeight) {
+                        element.style.opacity = '1';
+                    } else {
+                        element.style.opacity = '0';
+                    }
+                });
+            });
+        });
+
+        const burgerButton = document.querySelector('.burger-button');
+        const burgerMenu = document.querySelector('.burger-menu')
+        
+        function toggleBurger() {
+            burgerButton.classList.toggle('active')
+            burgerMenu.classList.toggle('active')
+        }
+
+        burgerButton.addEventListener('click', toggleBurger)
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            var usernameInput = document.getElementById("usernameInput");
+            var commentInput = document.getElementById("commentInput");
+            var addCommentBtn = document.getElementById("addCommentBtn");
+            var commentsContainer = document.getElementById("commentsContainer");
+        
+            loadCommentsFromLocalStorage();
+        
+            addCommentBtn.addEventListener("click", function () {
+                var username = usernameInput.value;
+                var comment = commentInput.value;
+        
+                if (username.trim() === "" || comment.trim() === "") {
+                    alert("No data provided (username/comment)");
+                    return;
+                }
+        
+                if (username.trim() !== "" && comment.trim() !== "") {
+                    addComment(username, comment, 0, 0);
+                    saveCommentsToLocalStorage();
+        
+                    usernameInput.value = "";
+                    commentInput.value = "";
+                }
+            });
+        });        
+
+        function addComment(username, comment, likes, dislikes) {
+            var likeState = false;
+            var dislikeState = false;
+        
+            var commentElement = document.createElement("div");
+            commentElement.className = "alert alert-light";
+            var commentContainer = document.createElement("div");
+            commentContainer.className = "MainDiv"
+            commentContainer.style.cssText = 'position: relative;';
+        
+            var commentParagraph = document.createElement("p");
+            commentParagraph.className = "comment";
+            var usernameWithColon = '<strong>' + username + '</strong> ';
+            commentParagraph.innerHTML = usernameWithColon + comment;
+        
+            commentParagraph.style.cssText = 'color: black; text-align: left; margin-left: 60px; max-width: 1000px; overflow: hidden; word-wrap: break-word; border: 1.5px solid black; border-radius: 8px; padding: 18px;';
+        
+            var additionalButton1 = document.createElement("button");
+            var additionalButton2 = document.createElement("button");
+            additionalButton1.className = "like";
+            additionalButton2.className = "dislike";
+            var countParagraph1 = document.createElement("p");
+            var countParagraph2 = document.createElement("p");
+            countParagraph1.className = "numLike";
+            countParagraph2.className = "numDislike";
+
+            countParagraph1.innerHTML = likes;
+            countParagraph2.innerHTML = dislikes;
+
+            additionalButton1.onclick = function () {
+                if (!likeState) {
+                    likes++;
+                    countParagraph1.textContent = likes;
+                    if (dislikeState) {
+                        dislikes--;
+                        countParagraph2.textContent = dislikes;
+                        dislikeState = false;
+                    }
+                } else {
+                    likes--;
+                    countParagraph1.textContent = likes;
+                }
+                likeState = !likeState;
+                saveCommentsToLocalStorage();
+            };
+            additionalButton2.onclick = function () {
+                if (!dislikeState) {
+                    dislikes++;
+                    countParagraph2.textContent = dislikes;
+                    if (likeState) {
+                        likes--;
+                        countParagraph1.textContent = likes;
+                        likeState = false;
+                    }
+                } else {
+                    dislikes--;
+                    countParagraph2.textContent = dislikes;
+                }
+                dislikeState = !dislikeState;
+                saveCommentsToLocalStorage();
+            };
+            
+        
+            additionalButton1.style.cssText = "width: 50px; height: 50px; font-size: 14px; margin-top: 6px; margin-right: 75px; background-image: url('/assets/like.png'); background-size: cover; border: 0;";
+            additionalButton2.style.cssText = "width: 50px; height: 50px; font-size: 14px; margin-top: 6px; margin-right: 35px; background-image: url('/assets/dislike.png'); background-size: cover; border: 0;";
+        
+            countParagraph1.innerHTML = likes;
+            countParagraph2.innerHTML = dislikes;
+        
+            countParagraph1.style.cssText = "margin-right: -35px; color: black; font-weight: bold;";
+            countParagraph2.style.cssText = "margin-right: -35px; color: black; font-weight: bold;";
+        
+            var buttonContainer = document.createElement("div");
+            buttonContainer.className = "HEREareLIKESandDISLIKES";
+            buttonContainer.style.position = "absolute";
+            buttonContainer.style.right = "0";
+            buttonContainer.style.top = "0";
+            buttonContainer.style.display = "flex";
+            buttonContainer.appendChild(countParagraph1);
+            buttonContainer.appendChild(additionalButton1);
+            buttonContainer.appendChild(countParagraph2);
+            buttonContainer.appendChild(additionalButton2);
+        
+            commentContainer.appendChild(commentParagraph);
+            commentContainer.appendChild(buttonContainer);
+        
+            commentElement.appendChild(commentContainer);
+            commentsContainer.appendChild(commentElement);
+        
+            saveCommentsToLocalStorage();
+            console.log("Комментарий сохранен в локальное хранилище");
+        }        
+
+        function saveCommentsToLocalStorage() {
+            var currentComments = [];
+            var mainDivElements = document.querySelectorAll(".MainDiv");
+        
+            mainDivElements.forEach(function (mainDivElement) {
+                var username = mainDivElement.querySelector("strong").textContent;
+                var commentParagraph = mainDivElement.querySelector(".comment");
+                var comment = commentParagraph ? commentParagraph.textContent.trim() : '';
+
+                if (comment.includes(username)) {
+                    comment = comment.replace(new RegExp(username, 'g'), '').trim();
+                }
+        
+                var likesAndDislikesContainer = mainDivElement.querySelector(".HEREareLIKESandDISLIKES");
+                if (likesAndDislikesContainer) {
+                    var likesElement = likesAndDislikesContainer.querySelector(".numLike");
+                    var dislikesElement = likesAndDislikesContainer.querySelector(".numDislike");
+                    var likes = likesElement ? parseInt(likesElement.innerHTML) : 0;
+                    var dislikes = dislikesElement ? parseInt(dislikesElement.innerHTML) : 0;
+                } else {
+                    var likes = 0;
+                    var dislikes = 0;
+                }
+        
+                currentComments.push({
+                    username: username,
+                    comment: comment,
+                    likes: likes,
+                    dislikes: dislikes,
+                });
+            });
+            localStorage.setItem("comments", JSON.stringify(currentComments));
+        }
+        
+            
+        function loadCommentsFromLocalStorage() {
+            var savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+            savedComments.forEach(function (savedComment) {
+                addComment(savedComment.username, savedComment.comment, savedComment.likes, savedComment.dislikes);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var deleteButton = document.getElementById('deleteAllComments');
+            deleteButton.addEventListener('click', function() {
+                removeAllComments();
+            });
+        });
+
+        function removeAllComments() {
+            commentsContainer.innerHTML = "";
+            localStorage.removeItem("comments");
+        }
+
+</script>

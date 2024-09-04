@@ -1,0 +1,2237 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password_digest" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20231209094557)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20231208215358);[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'test', '2023-12-16 07:29:32.769451', '2023-12-16 07:29:32.769454') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '742364af6053f286a19df45c887914410ba31b8c', '2023-12-16 07:29:32.769813', '2023-12-16 07:29:32.769814') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:05:06.705806', '2023-12-16 08:05:06.705806');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:05:06.705806', '2023-12-16 08:05:06.705806')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:05:06 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 301.0ms | Allocations: 146843)
+Completed 200 OK in 309ms (Views: 303.4ms | ActiveRecord: 0.0ms | Allocations: 153605)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+SessionsControllerTest: test_should_post_login_page
+---------------------------------------------------
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:05:07 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:9:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:09:55.969270', '2023-12-16 08:09:55.969270');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:09:55.969270', '2023-12-16 08:09:55.969270');
+INSERT INTO "users" ("id", "username", "created_at", "updated_at", "password_digest") VALUES (841424861, 'example_user', '2023-12-16 08:09:55.969270', '2023-12-16 08:09:55.969270', '$2a$12$W.xeCO1InM/sA443eXcloO5NMKIemQkNnB0PVWX636kPaWcb98ZYa')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:09:56 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 40228)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 46989)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+SessionsControllerTest: test_should_post_login_page
+---------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:09:56 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:16:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:11:20.570567', '2023-12-16 08:11:20.570567');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:11:20.570567', '2023-12-16 08:11:20.570567');
+INSERT INTO "users" ("id", "username", "created_at", "updated_at", "password_digest") VALUES (841424861, 'example_user', '2023-12-16 08:11:20.570567', '2023-12-16 08:11:20.570567', '$2a$12$h02i7jnQNkNPMidVuoYCFONMTfTG1l8jKmFiO2ybkDNrZn7sUsXvK')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:11:20 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 39596)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 46357)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+SessionsControllerTest: test_should_post_login_page
+---------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:11:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/presentation
+Completed 302 Found in 246ms (ActiveRecord: 0.0ms | Allocations: 1049)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:12:25.375897', '2023-12-16 08:12:25.375897');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:12:25.375897', '2023-12-16 08:12:25.375897');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:12:25.375897', '2023-12-16 08:12:25.375897')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:12:25 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 40119)
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 46880)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+SessionsControllerTest: test_should_post_login_page
+---------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:12:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:18:41.115480', '2023-12-16 08:18:41.115480');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:18:41.115480', '2023-12-16 08:18:41.115480');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:18:41.115480', '2023-12-16 08:18:41.115480')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:18:41 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 39596)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 46356)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:18:41 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2221)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:18:41 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1171)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SessionsControllerTest: test_should_display_login
+-------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:18:41 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1711)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:11.661165', '2023-12-16 08:21:11.661165');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:11.661165', '2023-12-16 08:21:11.661165');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:21:11.661165', '2023-12-16 08:21:11.661165')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:21:11 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 39634)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.0ms | Allocations: 46394)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:21:11 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1671)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2166)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:21:11 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1171)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:21:11 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:33:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+SessionsControllerTest: test_should_display_login
+-------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:21:11 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1416)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1712)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:28.121224', '2023-12-16 08:21:28.121224');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:28.121224', '2023-12-16 08:21:28.121224');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:21:28.121224', '2023-12-16 08:21:28.121224')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:21:28 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 40131)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 46890)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:21:28 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:21:28 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1671)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2165)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:21:28 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:24:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:40.514514', '2023-12-16 08:21:40.514514');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:21:40.514514', '2023-12-16 08:21:40.514514');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:21:40.514514', '2023-12-16 08:21:40.514514')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:21:40 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:24:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:21:40 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 39759)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 42805)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:21:40 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1724)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2218)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:21:40 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:22:43.539517', '2023-12-16 08:22:43.539517');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:22:43.539517', '2023-12-16 08:22:43.539517');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:22:43.539517', '2023-12-16 08:22:43.539517')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:22:43 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 40198)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 46958)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:22:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:24:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:22:43 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.1ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1728)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2223)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:22:43 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:23:20.669329', '2023-12-16 08:23:20.669329');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:23:20.669329', '2023-12-16 08:23:20.669329');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:23:20.669329', '2023-12-16 08:23:20.669329')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:23:20 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 39646)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 46406)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+SessionsControllerTest: test_should_fail_login
+----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:23:20 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:24:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:23:20 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1728)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2223)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:23:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:23:27.202239', '2023-12-16 08:23:27.202239');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:23:27.202239', '2023-12-16 08:23:27.202239');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:23:27.202239', '2023-12-16 08:23:27.202239')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:23:27 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.3ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 39862)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 46622)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:23:27 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1671)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2166)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:23:27 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1171)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:24:24.082399', '2023-12-16 08:24:24.082399');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:24:24.082399', '2023-12-16 08:24:24.082399');
+INSERT INTO "users" ("id", "username", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'password123', '2023-12-16 08:24:24.082399', '2023-12-16 08:24:24.082399')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:24:24 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 40038)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 46798)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+SessionsControllerTest: test_should_get_login_page
+--------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:24:24 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2221)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:24:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1171)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:27:33.647544', '2023-12-16 08:27:33.647544');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:27:33.647544', '2023-12-16 08:27:33.647544');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:27:33.647544', '2023-12-16 08:27:33.647544')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsControllerTest: test_should_successfully_login_with_correct_credentials
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:27:33 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:19:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:27:33 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.1ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 39999)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 43045)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:27:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1064)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:09.168225', '2023-12-16 08:28:09.168225');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:09.168225', '2023-12-16 08:28:09.168225');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:28:09.168225', '2023-12-16 08:28:09.168225')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:28:09 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 40133)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 46894)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:28:09 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1173)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:31.175640', '2023-12-16 08:28:31.175640');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:31.175640', '2023-12-16 08:28:31.175640');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:28:31.175640', '2023-12-16 08:28:31.175640')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:28:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.1ms | Allocations: 3607)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:28:31 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 5.0ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 40072)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 44458)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsControllerTest: test_should_successfully_login_with_correct_credentials
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:28:31 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:19:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:57.690510', '2023-12-16 08:28:57.690510');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:28:57.690510', '2023-12-16 08:28:57.690510');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:28:57.690510', '2023-12-16 08:28:57.690510')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:28:57 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.1ms | Allocations: 3607)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:28:57 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 4.9ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 40013)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 44398)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsControllerTest: test_should_successfully_login_with_correct_credentials
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:28:57 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:19:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:29:53.004137', '2023-12-16 08:29:53.004137');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:29:53.004137', '2023-12-16 08:29:53.004137');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:29:53.004137', '2023-12-16 08:29:53.004137')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:29:53 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 40188)
+Completed 200 OK in 34ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 46948)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:29:53 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1177)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:29:53 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1711)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:30:20.321321', '2023-12-16 08:30:20.321321');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:30:20.321321', '2023-12-16 08:30:20.321321');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:30:20.321321', '2023-12-16 08:30:20.321321')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:30:20 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 40189)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.0ms | Allocations: 46950)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsControllerTest: test_should_successfully_login_with_correct_credentials
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:30:20 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2221)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:30:20 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:30:20 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1416)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1712)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:30:20 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 1064)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:34:44.895306', '2023-12-16 08:34:44.895306');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:34:44.895306', '2023-12-16 08:34:44.895306');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:34:44.895306', '2023-12-16 08:34:44.895306')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:34:44 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 39640)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 46401)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:34:45 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1177)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsControllerTest: test_should_successfully_login_with_correct_credentials
+-------------------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:34:45 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1726)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2220)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:34:45 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:34:45 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1416)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1712)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:05.854536', '2023-12-16 08:37:05.854536');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:05.854536', '2023-12-16 08:37:05.854536');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:37:05.854536', '2023-12-16 08:37:05.854536')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:37:05 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 39657)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 46418)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:37:05 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:06 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.1ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1673)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2168)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:37:06 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1064)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:06 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1711)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:15.835325', '2023-12-16 08:37:15.835325');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:15.835325', '2023-12-16 08:37:15.835325');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:37:15.835325', '2023-12-16 08:37:15.835325')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:15 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 40069)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 46828)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:37:15 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2221)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:37:15 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started POST "/presentation" for 127.0.0.1 at 2023-12-16 11:37:15 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/presentation"):
+  
+test/controllers/sessions_controller_test.rb:28:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:16 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1421)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1705)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:37:16 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1064)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:39.562195', '2023-12-16 08:37:39.562195');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:37:39.562195', '2023-12-16 08:37:39.562195');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:37:39.562195', '2023-12-16 08:37:39.562195')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 40095)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 46855)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1429)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1735)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 2703)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3314)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1724)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:37:39 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:42:55.326695', '2023-12-16 08:42:55.326695');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:42:55.326695', '2023-12-16 08:42:55.326695');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:42:55.326695', '2023-12-16 08:42:55.326695')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 40596)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.0ms | Allocations: 47586)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1671)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2166)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1349)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1602)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_display_username_and_page
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1797)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.3ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1724)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:42:55 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:43:25.995993', '2023-12-16 08:43:25.995993');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:43:25.995993', '2023-12-16 08:43:25.995993');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:43:25.995993', '2023-12-16 08:43:25.995993')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 40162)
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 46921)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.1ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1673)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2168)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1064)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 2701)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3312)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 1349)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1602)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_display_username_and_page
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:43:26 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 1349)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1688)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:45:50.026717', '2023-12-16 08:45:50.026717');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:45:50.026717', '2023-12-16 08:45:50.026717');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:45:50.026717', '2023-12-16 08:45:50.026717')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 40602)
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 47592)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1671)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2166)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1711)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1724)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:45:50 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:47:18.777846', '2023-12-16 08:47:18.777846');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:47:18.777846', '2023-12-16 08:47:18.777846');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:47:18.777846', '2023-12-16 08:47:18.777846')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 41149)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 48139)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2221)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1673)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2167)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_display_username_and_page
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1349)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1715)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 1349)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1602)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:47:18 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:50:48.122679', '2023-12-16 08:50:48.122679');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:50:48.122679', '2023-12-16 08:50:48.122679');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:50:48.122679', '2023-12-16 08:50:48.122679')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 41212)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 48202)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1671)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2166)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+SessionsControllerTest: test_should_get_comment
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1349)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1715)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1349)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1602)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1724)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:50:48 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:51:05.628297', '2023-12-16 08:51:05.628297');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:51:05.628297', '2023-12-16 08:51:05.628297');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:51:05.628297', '2023-12-16 08:51:05.628297')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 39849)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 46608)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 2703)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3424)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1724)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1416)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1712)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+SessionsControllerTest: test_should_get_comment
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:51:05 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1797)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 08:51:25.406954', '2023-12-16 08:51:25.406954');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 08:51:25.406954', '2023-12-16 08:51:25.406954');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 08:51:25.406954', '2023-12-16 08:51:25.406954')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 40134)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 46893)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+SessionsControllerTest: test_should_get_comment
+-----------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 2703)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 3424)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.3ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1724)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2218)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1416)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1712)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 11:51:25 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1423)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1797)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-16 09:05:59.041179', '2023-12-16 09:05:59.041179');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-16 09:05:59.041179', '2023-12-16 09:05:59.041179');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-16 09:05:59.041179', '2023-12-16 09:05:59.041179')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 40215)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 46975)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1429)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1735)
+Started POST "/registration" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1726)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2220)
+Started POST "/login" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-16 12:05:59 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 2705)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3316)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-23 15:52:09.574428', '2023-12-23 15:52:09.574428');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-23 15:52:09.574428', '2023-12-23 15:52:09.574428');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-23 15:52:09.574428', '2023-12-23 15:52:09.574428')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 99.6ms | Allocations: 80817)
+Completed 200 OK in 109ms (Views: 103.8ms | ActiveRecord: 0.0ms | Allocations: 87577)
+Started POST "/login" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1751)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 3190)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3805)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1682)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2177)
+Started POST "/registration" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1063)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 1435)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1723)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+PresentationIntegrationTest: test_mistake_one_field
+---------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1361)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1700)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+PresentationIntegrationTest: test_input_only_numbers
+----------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+PresentationIntegrationTest: test_user_comment_check
+----------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PresentationIntegrationTest: test_irrelevant_input
+--------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:52:09 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2023-12-23 15:53:00.317876', '2023-12-23 15:53:00.317876');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2023-12-23 15:53:00.317876', '2023-12-23 15:53:00.317876');
+INSERT INTO "users" ("id", "username", "email", "password", "created_at", "updated_at") VALUES (841424861, 'example_user', 'hello@mail.ru', 'password123', '2023-12-23 15:53:00.317876', '2023-12-23 15:53:00.317876')[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_registration_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 40547)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 47308)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+SessionsControllerTest: test_should_post_registration_page
+----------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/registration" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by RegistrationController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering registration/person.html.erb within layouts/application
+  Rendered registration/person.html.erb within layouts/application (Duration: 0.0ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1437)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1743)
+Started POST "/registration" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"username"=>"example_user", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "example_user"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+SessionsControllerTest: test_should_not_successfully_register
+-------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by LoginController#person as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/person.html.erb within layouts/application
+  Rendered login/person.html.erb within layouts/application (Duration: 0.2ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1732)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2226)
+Started POST "/login" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+test/controllers/sessions_controller_test.rb:23:in `block in <class:SessionsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+SessionsControllerTest: test_should_get_presentation_page
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 841424861], ["LIMIT", 1]]
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 3175)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3786)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PresentationIntegrationTest: test_irrelevant_input
+--------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+PresentationIntegrationTest: test_user_comment_check
+----------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+PresentationIntegrationTest: test_mistake_one_field
+---------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1357)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+PresentationIntegrationTest: test_input_only_numbers
+----------------------------------------------------
+Started GET "/presentation" for 127.0.0.1 at 2023-12-23 18:53:00 +0300
+Processing by PresentationController#gadget as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentation/gadget.html.erb within layouts/application
+  Rendered presentation/gadget.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 1357)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1696)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
